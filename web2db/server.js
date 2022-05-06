@@ -12,6 +12,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+var visit_count = 0;
+var comment_count = 0;
  
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +40,10 @@ app.use(flash());
  
 /* GET home page. */
 app.get('/', function(req, res, next) {
+  console.log('Someone visit your web !');
   res.render('index', { title: 'main page' });
+  visit_count += 1;
+  console.log('# visit is',visit_count,'# comment is',comment_count);
 });
  
 app.post('/user', function(req, res, next) {
@@ -46,6 +52,8 @@ app.post('/user', function(req, res, next) {
   var email = req.body.email;
   var message = req.body.message;
  
+  comment_count += 1;
+
   var sql = `INSERT INTO contacts (f_name, l_name, email, message, created_at) VALUES ("${f_name}", "${l_name}", "${email}", "${message}", NOW())`;
   db.query(sql, function(err, result) {
     if (err) throw err;

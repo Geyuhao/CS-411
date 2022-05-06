@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>Login</title>  
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+
+</head>  
+<body>  
+ <div id="login">  
+ <h1>Welcome!</h1>  
+
+    <!-- modi -->
+    <div class="modal fade" id="user_input" tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- content -->
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="task-form-display">User name</span>
+                    <input type="text" name = "name" class="form-control" >
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="task-form-display">Password</span>
+                    <input type="password" name = "password" class="form-control">
+                </div>
+                <!-- <div class="input-group mb-3">
+                    <span class="input-group-text" id="task-form-display">Your Birthday</span>
+                    <input type="text" name = "birth" class="form-control">
+                </div> -->
+            </div>
+
+            <!-- submit -->
+            <div class="modal-footer">
+                <button id="check_but" type="button" class="btn btn-primary">Go!</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</div>  
+</body>  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='script/modal.js') }}"></script>
+
+</html>

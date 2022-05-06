@@ -1,0 +1,16 @@
+runtime: python38
+
+instance_class: F1
+
+# env_variables:
+#   MYSQL_USER: 'yuhao'
+#   MYSQL_PASSWORD: ''
+#   MYSQL_DB: 'CS411Project'
+#   MYSQL_HOST: '34.136.51.71'
+
+# Yuhao's cPanel
+env_variables:
+  MYSQL_USER: 'root'
+  MYSQL_PASSWORD: ''
+  MYSQL_DB: 'cs411'
+  MYSQL_HOST: '34.121.158.230'
